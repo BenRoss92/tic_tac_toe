@@ -1,7 +1,8 @@
 describe ('Game', function() {
 
   var game;
-  var player;
+  var playerX;
+  var playerO;
 
   beforeEach(function () {
     game = new Game();
@@ -18,6 +19,11 @@ describe ('Game', function() {
     it('A new game creates Player O', function() {
       expect(game._playerO).toEqual([playerO]);
     });
+
+    it('A board of 9 spaces is created', function() {
+      expect(game._board).toEqual([[" "," ",""], [" "," ",""], [" "," ",""]]);
+    });
+
 
   });
 
